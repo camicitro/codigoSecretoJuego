@@ -1,0 +1,15 @@
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    line-height: 100px;
+}
+
+.word-container {
+    flex: 1 0 16%;
+    background-color: antiquewhite;
+    border: solid 2px black;
+    text-align: center;
+    margin: 10px;
+    border-radius: 12px;
+}

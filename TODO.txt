@@ -1,0 +1,4 @@
+1. Revisar el pasaje de parametros, que en el routes puse el /:id por ejemplo, ver si hay otra forma que sea mas segura
+
+
+me quede en el tercer video, minuto 10:36

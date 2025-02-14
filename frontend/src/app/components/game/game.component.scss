@@ -1,0 +1,11 @@
+.cards-container {
+    margin: 5%;
+}
+.role-container, .start-game-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nextgame {
+    float: right;
+}
