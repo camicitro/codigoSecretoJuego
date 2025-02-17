@@ -9,6 +9,7 @@ Básicamente se trata de adivinar palabras. El objetivo del juego es ser el prim
 - El equipo seleccionó una palabra "neutral": en ese instante finaliza el turno del equipo.
 - El equipo seleccionó una palabra del otro equipo: en ese instante finaliza el turno del equipo. No sucede nada, simplemente le regalaste una palabra al otro equipo.
 - El equipo seleccionó la palabra bomba: en ese instante finaliza TODO el juego, el equipo pierde.
+
 Una vez adivinadas todas las palabras del equipo o al haber sido seleccionada la bomba. Finaliza el juego.
 <div align="center">
   <img src="https://github.com/user-attachments/assets/4fbf6b32-cd01-41d8-9942-ff9fb60bc4a2" width="300">
