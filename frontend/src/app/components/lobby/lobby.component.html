@@ -1,3 +1,14 @@
 <div class="box">
-    <button mat-raised-button (click)="createGame()">Create game</button>
+     <div class="title-container">
+        <h1 class="title">Código Secreto Juego</h1>
+    </div> 
+    <div class="create-game-btn-container">
+        <button class="create-game-btn" (click)="createGame()">Crear Juego</button>
+    </div>
+    <div class="how-to-play-container">
+        <button class="rules-btn" (click)="toggleRules()">?</button>
+    </div>
+    <div class="rules-popup" *ngIf="showRules">
+        <app-how-to-play (close)="toggleRules()"></app-how-to-play>
+    </div>
 </div>

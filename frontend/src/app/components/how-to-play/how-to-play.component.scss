@@ -1,0 +1,27 @@
+.pop-up-container {
+    background-color: #d7dbdf;
+    padding: 20px;
+    border-radius: 32px;
+    position: relative; 
+    color: #34495e;
+}
+
+.text-container {
+    margin: 16px;
+    padding: 0px 16px;
+}
+.text-rules {
+    color: #212e3b;
+}
+
+.close-btn {
+    position: absolute; 
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #34495e;
+    margin: 16px;
+}

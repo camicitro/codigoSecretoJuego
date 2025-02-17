@@ -1,27 +1,21 @@
 <div class="flex-container">
-    <div class="word-container">TEST</div>
-    <div class="word-container">TEST</div>
-    <div class="word-container">TEST</div>
-    <div class="word-container">TEST</div>
-    <div class="word-container">TEST</div>
-    <div class="word-container">TEST</div>
-    <div class="word-container">TEST</div>
-    <div class="word-container">TEST</div>
-    <div class="word-container">TEST</div>
-    <div class="word-container">TEST</div>
-    <div class="word-container">TEST</div>
-    <div class="word-container">TEST</div>
-    <div class="word-container">TEST</div>
-    <div class="word-container">TEST</div>
-    <div class="word-container">TEST</div>
-    <div class="word-container">TEST</div>
-    <div class="word-container">TEST</div>
-    <div class="word-container">TEST</div>
-    <div class="word-container">TEST</div>
-    <div class="word-container">TEST</div>
-    <div class="word-container">TEST</div>
-    <div class="word-container">TEST</div>
-    <div class="word-container">TEST</div>
-    <div class="word-container">TEST</div>
-    <div class="word-container">TEST</div>
+    <ng-container *ngFor="let word of words">
+        <div class="spy-master-word-container" *ngIf="role === 'spymaster' && !word.selected" [ngClass]="{ 'red-spy-master': word.color === 'red', 'blue-spy-master': word.color === 'blue', 'bomb-spy-master': word.color === 'black'}">
+            <p>{{ word.word | uppercase}}</p>
+        </div>
+        <div class="word-container" *ngIf="role === 'operative' && !word.selected" (click)="clickWord(word)">
+            <p>{{ word.word | uppercase}}</p>
+        </div>
+        <div class="word-container" *ngIf="word.selected" [ngClass]="{ 'red-team': word.color === 'red', 'blue-team': word.color === 'blue', 'bomb': word.color === 'black'}">
+            <p>{{ word.word | uppercase}}</p>
+        </div>
+    </ng-container>
+    
+
 </div>
+
+
+
+<!--<div class="word-container" *ngIf="word.selected" [ngStyle]="{ 'background': word.color, 'border-color': word.color}">
+            <p>{{ word.word | uppercase}}</p>
+        </div>-->
