@@ -1,7 +1,7 @@
 <h1 align="center"> codigoSecretoJuego  </h1>
 
 ## Introducción
-La idea de este proyecto era poner en práctica conceptos aprendidos en el curso básico de Angular de OpenBootcamp. El mismo es una representación del juego "Código Secreto". Presenta las mismas reglas y forma de juego. Mi meta era practicar Angular por lo que el proyecto no tiene un backend real sino un par de archivos para manejar las palabras aleatorias.
+La idea de este proyecto era poner en práctica conceptos aprendidos en el curso básico de Angular de OpenBootcamp. El mismo es una representación del juego "Código Secreto". Presenta las mismas reglas y forma de juego. Mi meta era practicar Angular por lo que el proyecto no tiene un backend real sino un par de archivos para generar las palabras aleatorias y manejar el ingreso de varios jugadores.
 
 ## Sobre el juego
 Básicamente se trata de adivinar palabras. El objetivo del juego es ser el primer equipo en adivinar todas las palabras de tu mismo color. Para poder jugar correctamente se necesitan al menos 4 jugadores, donde 2 de ellos serán los "Espías Jefes" y el resto serán los "Espías Operativos". Los espías jefes irán dando pistas a su equipo para adivinar las palabras de su color, esto se hará dando una pista que consta de una única palabra junto a un número, el cual indicará la cantidad de palabras a adivinar para esa pista. Por ejemplo: madera 3. Entonces el resto del equipo tiene que encontrar 3 palabras relacionadas a "madera". Se pueden dar los siguientes casos:
