@@ -15,20 +15,35 @@ export class CardComponent {
   @Input() words: ICard[] = [];
   @Input() role: string = 'operative';
   @Output() wordClicked = new EventEmitter<ICard>();
+  preselectedWord: ICard | null = null;
 
   constructor() { }
 
   ngOnInit() {
     
   }
-
+  /*
   clickWord(word: ICard){
     console.log('Word clicked desde el card', word);
     word.selected = true;
     this.wordClicked.emit(word);
-    //TODO: Podria hacer que word.selected = !word.selected; y que para decirle que elige ese toque un boton de ok
+  }*/
+
+  clickWord(word: ICard) {
+    if (this.role === 'operative' && !word.selected) {
+      this.preselectedWord = word;
+    }
   }
 
-  
+  confirmSelection() {
+    if (this.preselectedWord) {
+      this.wordClicked.emit(this.preselectedWord);
+      this.preselectedWord = null;
+    }
+  }
+
+  cancelSelection(){
+    this.preselectedWord = null;
+  }
 
 }

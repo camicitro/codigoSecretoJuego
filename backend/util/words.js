@@ -69,7 +69,7 @@ const words = [
                 })
         }
 
-        for (var red = 0; red < 9; red++) {
+        for (var red = 0; red < 8; red++) {
             var singleIndex = getRandomNumber(cards.length)
 
             cards[singleIndex].color = "red"; //red

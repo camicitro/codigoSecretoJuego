@@ -3,19 +3,22 @@
         <div class="spy-master-word-container" *ngIf="role === 'spymaster' && !word.selected" [ngClass]="{ 'red-spy-master': word.color === 'red', 'blue-spy-master': word.color === 'blue', 'bomb-spy-master': word.color === 'black'}">
             <p>{{ word.word | uppercase}}</p>
         </div>
-        <div class="word-container" *ngIf="role === 'operative' && !word.selected" (click)="clickWord(word)">
+        <div class="word-container not-selected" *ngIf="role === 'operative' && !word.selected && preselectedWord !== word" (click)="clickWord(word)">
             <p>{{ word.word | uppercase}}</p>
         </div>
-        <div class="word-container" *ngIf="word.selected" [ngClass]="{ 'red-team': word.color === 'red', 'blue-team': word.color === 'blue', 'bomb': word.color === 'black'}">
+
+        <div class="word-container preselected" *ngIf="role === 'operative' && preselectedWord === word">
+            <p>{{ word.word | uppercase }}</p>
+            <div class="button-preselected">
+                <button class="selection-btn" (click)="confirmSelection()">Confirmar</button>
+                <button class="selection-btn" (click)="cancelSelection()">Cancelar</button>
+            </div>
+        </div>
+
+        <div class="word-container" *ngIf="word.selected" [ngClass]="{ 'red-team': word.color === 'red', 'blue-team': word.color === 'blue', 'bomb': word.color === 'black', 'neutral': word.color === 'neutral'}">
             <p>{{ word.word | uppercase}}</p>
         </div>
     </ng-container>
     
 
 </div>
-
-
-
-<!--<div class="word-container" *ngIf="word.selected" [ngStyle]="{ 'background': word.color, 'border-color': word.color}">
-            <p>{{ word.word | uppercase}}</p>
-        </div>-->

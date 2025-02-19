@@ -16,7 +16,6 @@ import { ICard } from '../../models/card.interface';
 export class GameComponent implements OnInit {
   role: string = 'operative';
   gameId: string | null = null;
-  //wordsString: string | null = null; 
   words: ICard[] = [];
   
   constructor(private socketioService: SocketioService, private router: ActivatedRoute, private snackbar: MatSnackBar) {}
@@ -27,7 +26,6 @@ export class GameComponent implements OnInit {
     this.receiveJoinedPlayers();
     this.receiveStartGame();
     this.receiveGameUpdate();
-    // Si el jugador es el creador del juego, inicia la partida automáticamente
     if (this.gameId) {
       this.startGame();
     }
@@ -72,7 +70,20 @@ export class GameComponent implements OnInit {
       return w;
   });
 
-  this.words = updatedWords;
+    this.words = updatedWords;
     this.socketioService.sendGameUpdate(this.gameId!, this.words);
+    if(this.isGameOver()){
+      this.snackbar.open('¡Juego terminado!', 'Cerrar', {
+        duration: 5000,
+      });
+    }
+  }
+
+  countSelectedWords(color: string): number{
+    return this.words.filter(w => w.selected && w.color == color).length;
+  }
+
+  isGameOver(): boolean {
+    return (this.countSelectedWords('red') == 7 || this.countSelectedWords('blue') == 8 || this.countSelectedWords('black') > 0);
   }
 }
