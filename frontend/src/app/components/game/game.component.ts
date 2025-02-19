@@ -86,4 +86,18 @@ export class GameComponent implements OnInit {
   isGameOver(): boolean {
     return (this.countSelectedWords('red') == 7 || this.countSelectedWords('blue') == 8 || this.countSelectedWords('black') > 0);
   }
+
+  copyLink() {
+    const currentUrl = window.location.href;
+    navigator.clipboard.writeText(currentUrl).then(() => {
+      this.snackbar.open('Enlace copiado al portapapeles', 'Cerrar', {
+        duration: 3000,
+      });
+    }).catch(err => {
+      console.error('Error al copiar el enlace: ', err);
+      this.snackbar.open('Error al copiar el enlace', 'Cerrar', {
+        duration: 3000,
+      });
+    });
+  }
 }

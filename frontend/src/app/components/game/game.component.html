@@ -1,6 +1,7 @@
 <div class="cards-container">
     <div class="header-container">
         <button (click)="nextGame()" class="nextgame game-btn" *ngIf="words">Nuevo juego</button>
+        <button (click)="copyLink()" class="share-link-btn game-btn">Compartir enlace</button>
     </div>
     
     <div class="start-game-container" *ngIf="!words">
