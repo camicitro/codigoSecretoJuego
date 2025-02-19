@@ -11,6 +11,7 @@ Básicamente se trata de adivinar palabras. El objetivo del juego es ser el prim
 - El equipo seleccionó la palabra bomba: en ese instante finaliza TODO el juego, el equipo pierde.
 
 Una vez adivinadas todas las palabras del equipo o al haber sido seleccionada la bomba. Finaliza el juego.
+Una ligera diferencia con el juego original es que en este, cada equipo tiene la misma cantidad de palabras (8). Mientras que en el original tiene un equipo una carta de más.
 <div align="center">
   <img src="https://github.com/user-attachments/assets/4fbf6b32-cd01-41d8-9942-ff9fb60bc4a2" width="300">
 </div>
@@ -29,7 +30,7 @@ El contenido del proyecto se divide en dos carpetas:
 ### Backend
 Dentro de esta carpeta los archivos de mayor importancia son:
 - **index.js**: para configurar e iniciar un servidor web en tiempo real, utilizando socket.IO para manejar eventos, como cuando un cliente nuevo se conecta al servidor. Esto permite que puedan jugar varios usuarios utilizando distintos dispositivos.
-- **words.js**: contiene la lógica para obtener las 25 palabras aleatorias de cada partida. Toma del arreglo de palabras 25 de ellas al azar, va guardando 7 para cada equipo (también aleatoriamente) y guarda una palabra como "bomba".
+- **words.js**: contiene la lógica para obtener las 25 palabras aleatorias de cada partida. Toma del arreglo de palabras 25 de ellas al azar, va guardando 8 para cada equipo (también aleatoriamente) y guarda una palabra como "bomba".
 
 ### Frontend
 Contiene cuatro componentes:
