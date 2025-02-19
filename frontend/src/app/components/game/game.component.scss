@@ -7,6 +7,8 @@
 .cards-container {
     margin: 5%;
     background-color: #212f3c;
+    display: flex;
+    flex-direction: column;
 }
 .role-container, .start-game-container {
     display: flex;
@@ -14,5 +16,54 @@
     justify-content: center;
 }
 .nextgame {
-    float: right;
+    float: inline-end;
 }
+
+.game-btn{
+    background-color: #34495e;
+    color: #d7dbdf;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: 2px solid #d7dbdf ;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+  
+  .game-btn:hover {
+      background-color: #212f3c; 
+  }
+
+  .role-container mat-button-toggle-group {
+    display: flex; 
+    justify-content: center; 
+    border: 2px solid #d7dbdf ;
+  }
+  .role-container mat-button-toggle {
+    background-color: #34495e;
+    color: #d7dbdf; 
+    font-size: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  }
+  .role-container mat-button-toggle.mat-button-toggle-checked {
+    background-color: #d7dbdf; 
+    color: #34495e;
+  }
+  
+  .role-container mat-button-toggle:hover {
+    background-color: #212f3c;
+  }
+
+  .role-container mat-button-toggle.mat-button-toggle-checked:hover {
+    background-color: #afb5bb; 
+    color: #34495e;
+  }

@@ -77,23 +77,32 @@ $bomb-text-card: #494949 ;
 .spy-master-word-container p { 
     position: relative;
     bottom: -20%;
+    color: $neutral-text-card;
 }
 .red-spy-master {
     border: 4px solid $red-team-card;
-    
+}
+.red-spy-master p {
+    color: $red-team-text-card;
+}
+.blue-spy-master p {
+    color: $blue-team-text-card;
 }
 .blue-spy-master {
     color: $blue-team-text-card;
-    
+    border: 4px solid $blue-team-card;
 }
 .bomb-spy-master {
     border: 4px solid $bomb-card;
 }
-
+.bomb-spy-master p {
+    color: $bomb-card;
+}
 .word-container.preselected {
     background-color: $neutral-text-card;
     background-image: url(../../assets/selected.png);
     color: $neutral-card;
+    border-color: $neutral-card;
 }
 
 .button-preselected {
@@ -117,16 +126,30 @@ $bomb-text-card: #494949 ;
     padding: 5px;
     cursor: pointer;
 }
+.selection-btn:hover{
+    background-color: #817340;
+    color: $neutral-card;
+    border-color: $neutral-card;
+}
+
 
 @media (max-width: 1155px) {
-    .word-container {
+    .word-container, .spy-master-word-container {
         background-image: none;
         background-color: $neutral-card; 
+        border-style: solid;
     }
-    .word-container p { // Usamos un span para el texto
+    .word-container p {
         position: initial;
         border-radius: 12px;
         border: 2px solid $neutral-text-card;
+        margin: 16px;
+        padding: 0;
+    }
+    .spy-master-word-container p {
+        position: initial;
+        border-radius: 12px;
+        border: 2px solid ;
         margin: 16px;
         padding: 0;
     }
@@ -158,5 +181,8 @@ $bomb-text-card: #494949 ;
     }
     .word-container.preselected p {
         border: 2px solid $neutral-card;
+    }
+    .spy-master-word-container{
+        background-image: none;
     }
 }

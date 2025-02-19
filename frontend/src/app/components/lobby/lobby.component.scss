@@ -12,13 +12,13 @@
 }
   
 .create-game-btn{
-  background-color: #34495e; /* Un azul que contrasta */
+  background-color: #34495e;
   color: #d7dbdf;
   padding: 12px 24px;
   font-size: 18px;
-  border: 2px solid #d7dbdf ; /* Un borde más oscuro */
+  border: 2px solid #d7dbdf ;
   border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   transition: background-color 0.3s ease;
   text-align: center;
@@ -28,7 +28,7 @@
 
 .create-game-btn:hover {
     background-color: #212f3c; /* Un azul más oscuro al pasar el cursor */
-  }
+}
 
 .title-container {
     text-align: center;
