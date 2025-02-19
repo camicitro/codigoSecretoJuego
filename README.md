@@ -48,5 +48,6 @@ Aun no está desplegado por lo que para poder jugar, es necesario descargar el r
 ## Mejoras a futuro
 - [ ] Desplegar el proyecto para poder jugarlo sin tener que correrlo localmente
 - [X] Finalizar el juego cuando uno de los equipos complete sus tarjetas o haya seleccionado la bomba
+- [ ] Que al finalizar muestre un pop up indicando qué equipo gano. Para eso tengo que tener un registro del turno de cada equipo en caso de que uno presione la bomba (agregar botón de pasar).
 - [ ] Añadir botón para agregar amigos así no hay que copiar el enlace desde la barra de navegación
 - [X] Al cliquear sobre una palabra, que no se revele el color directamente, sino que se preseleccione y aparezca un botón de confirmación, luego de confirmado recién ahí se revele el color de la tarjeta
