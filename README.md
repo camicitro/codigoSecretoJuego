@@ -47,7 +47,7 @@ Aun no está desplegado por lo que para poder jugar, es necesario descargar el r
 
 ## Mejoras a futuro
 - [ ] Desplegar el proyecto para poder jugarlo sin tener que correrlo localmente
-- [ ] Finalizar el juego cuando uno de los equipos complete sus tarjetas o haya seleccionado la bomba
-- [ ] Agregar botón para agregar amigos así no hay que copiar el enlace desde la barra de navegación
-- [ ] Al cliquear sobre una palabra, que no se revele el color directamente, sino que se preseleccione y aparezca un botón de confirmación, luego de confirmado recién ahí se revele el color de la tarjeta
-- [ ] Agregar el manejo de la ronda de turnos (que al seleccionar una neutral o del otro equipo finalice el turno, que se adivinen todas las palabras relacionadas a esa pista o que se pueda pasar de turno)
+- [X] Finalizar el juego cuando uno de los equipos complete sus tarjetas o haya seleccionado la bomba
+- [ ] Añadir botón para agregar amigos así no hay que copiar el enlace desde la barra de navegación
+- [X] Al cliquear sobre una palabra, que no se revele el color directamente, sino que se preseleccione y aparezca un botón de confirmación, luego de confirmado recién ahí se revele el color de la tarjeta
+- [ ] Agregar un botón para que se pueda pasar de turno
