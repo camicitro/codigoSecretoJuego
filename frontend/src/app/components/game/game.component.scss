@@ -157,16 +157,6 @@ $blue-team-text-card:#1F618D;
   margin-bottom: 8px;
 }
 
-.title-background {
-  // position: absolute; /* Posiciona la imagen detrás del texto */
-  // top: 0;
-  // left: 0;
-  // width: 100%;
-  // height: 100%;
-  // object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
-  // z-index: -1; /* Coloca la imagen detrás del texto */
-}
-
 @media (max-width: 768px) {
   .header-container {
       flex-direction: column; 

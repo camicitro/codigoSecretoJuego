@@ -19,10 +19,9 @@ export class GameComponent implements OnInit {
   role: string = 'operative';
   gameId: string | null = null;
   words: ICard[] = [];
-  currentPlayer: string = '';//this.getRandomColor();
+  currentPlayer: string = '';
   winner: string = ''; 
   teamColors: string[] = ['red', 'blue'];
-  //endGame: boolean = false;
   showGameOver: boolean = false;
   
   constructor(private socketioService: SocketioService, private router: ActivatedRoute, private snackbar: MatSnackBar) {}
@@ -92,9 +91,6 @@ export class GameComponent implements OnInit {
     
     if(this.isGameOver()){
       this.showGameOverPopUp();
-      // this.snackbar.open('¡Juego terminado!', 'Cerrar', {
-      //   duration: 5000,
-      // });
     } else {
       this.automTurnsChange(word);
     }
