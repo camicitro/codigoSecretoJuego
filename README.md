@@ -54,3 +54,4 @@ Luego en otra terminal hay que ir a la carpeta de frontend (sin cerrar la anteri
 - [X] Que al finalizar muestre un pop up indicando qué equipo gano. Para eso tengo que tener un registro del turno de cada equipo en caso de que uno presione la bomba (agregar botón de pasar).
 - [X] Añadir botón para agregar amigos así no hay que copiar el enlace desde la barra de navegación
 - [X] Al cliquear sobre una palabra, que no se revele el color directamente, sino que se preseleccione y aparezca un botón de confirmación, luego de confirmado recién ahí se revele el color de la tarjeta
+- [ ] Agregar un chat o un campo de texto para que el espía maestro inserte las pistas así se puede jugar remotamente
