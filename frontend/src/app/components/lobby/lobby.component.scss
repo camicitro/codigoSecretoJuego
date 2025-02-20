@@ -64,12 +64,12 @@
 }
 
 .rules-popup {
-  position: fixed; /* Posiciona el popup sobre el contenido */
+  position: fixed; 
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Centra el popup */
-  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+  transform: translate(-50%, -50%); 
+  background-color: rgba(0, 0, 0, 0.8); 
   padding: 20px;
   border-radius: 16px;
-  z-index: 1000; /* Asegura que el popup esté encima de todo */
+  z-index: 1000;  
 }

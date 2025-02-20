@@ -1,0 +1,13 @@
+<div class="pop-up-container">
+    <button class="close-btn" (click)="closePopUp()">x</button>
+    <div class="text-container">
+        <h3 class="text-title">¡Juego terminado!</h3>
+        <p class="text-rules">
+            El equipo ganador es: {{ winner }}
+        </p>
+    </div>
+    <div class="new-game-container">
+        <button (click)="nextGame()" class="new-game-btn">Nuevo juego</button>
+    </div>
+    
+</div>

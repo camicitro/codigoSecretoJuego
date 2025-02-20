@@ -1,7 +1,24 @@
+$red-team-card: #EC7063;
+$red-team-text-card: #94362C;
+$blue-team-card:#5499C7;
+$blue-team-text-card:#1F618D;
+
 *{
     background-color: #212f3c;
     margin: 0;
     padding: 0;
+}
+
+
+.header-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(../../assets/spy22.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .cards-container {
@@ -15,9 +32,7 @@
     align-items: center;
     justify-content: center;
 }
-.nextgame {
-    float: inline-end;
-}
+
 
 .game-btn{
     background-color: #34495e;
@@ -32,38 +47,149 @@
     text-align: center;
     display: flex;
     align-items: center;
-  }
+    justify-content: center;
+}
   
-  .game-btn:hover {
-      background-color: #212f3c; 
+.game-btn:hover {
+    background-color: #212f3c; 
+}
+
+.role-container mat-button-toggle-group {
+  display: flex; 
+  justify-content: center; 
+  border: 2px solid #d7dbdf ;
+}
+.role-container mat-button-toggle {
+  background-color: #34495e;
+  color: #d7dbdf; 
+  font-size: 15px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.role-container mat-button-toggle.mat-button-toggle-checked {
+  background-color: #d7dbdf; 
+  color: #34495e;
+}
+ 
+.role-container mat-button-toggle:hover {
+  background-color: #212f3c;
+}
+
+.role-container mat-button-toggle.mat-button-toggle-checked:hover {
+  background-color: #afb5bb; 
+  color: #34495e;
+}
+
+.game-over-popup{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  background-color: rgba(0, 0, 0, 0.8); 
+  padding: 20px;
+  border-radius: 16px;
+  z-index: 1000;
+}
+
+.change-turn-btn{
+  background-color: #34495e;
+  color: #d7dbdf;
+  padding: 10px 20px;
+  margin-top: 8px;
+  font-size: 15px;
+  border: 2px solid #d7dbdf ;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.turns-container{
+  float: left;
+}
+
+.currentPlayer{
+   display: flex;
+   max-width: fit-content;
+   padding: 2px 8px;
+   border: 1px solid;
+   border-radius: 8px;
+   font-weight: 500;
+}
+
+.red-turn {
+  background-color: $red-team-card;
+  color: $red-team-text-card;
+  border-color: $red-team-text-card;
+}
+
+.blue-turn {
+  background-color: $blue-team-card;
+  color: $blue-team-text-card;
+  border-color: $blue-team-text-card;
+}
+
+.header-btns{
+  display: flex;
+  flex-direction: column;
+  float: inline-end;
+  gap: 8px;
+}
+
+.title-container {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: transparent;
+}
+
+.game-title{
+  color: #d7dbdf;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.title-background {
+  // position: absolute; /* Posiciona la imagen detrás del texto */
+  // top: 0;
+  // left: 0;
+  // width: 100%;
+  // height: 100%;
+  // object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+  // z-index: -1; /* Coloca la imagen detrás del texto */
+}
+
+@media (max-width: 768px) {
+  .header-container {
+      flex-direction: column; 
+      justify-content: center; 
+      align-items: center; 
   }
 
-  .role-container mat-button-toggle-group {
-    display: flex; 
-    justify-content: center; 
-    border: 2px solid #d7dbdf ;
+  .header-btns {
+      flex-direction: row; 
+      margin-top: 10px; 
+      margin-bottom: 10px;
   }
-  .role-container mat-button-toggle {
-    background-color: #34495e;
-    color: #d7dbdf; 
-    font-size: 15px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-align: center;
+
+  .title-container {
+      margin-bottom: 10px; 
+  }
+  .turns-container{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
-  .role-container mat-button-toggle.mat-button-toggle-checked {
-    background-color: #d7dbdf; 
-    color: #34495e;
+  .title-background {
+    display: none;
   }
-  
-  .role-container mat-button-toggle:hover {
-    background-color: #212f3c;
-  }
-
-  .role-container mat-button-toggle.mat-button-toggle-checked:hover {
-    background-color: #afb5bb; 
-    color: #34495e;
-  }
+}

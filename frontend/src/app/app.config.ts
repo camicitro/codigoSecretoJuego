@@ -12,17 +12,5 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes), 
     provideAnimationsAsync(), 
     provideHttpClient(),
-    // {
-    //   provide: TranslateLoader,
-    //   useFactory: HttpLoaderFactory,
-    //   deps: [HttpClient]
-    // },
-    // TranslateModule.forRoot({
-    //   loader: {
-    //     provide: TranslateLoader,
-    //     useFactory: HttpLoaderFactory,
-    //     deps: [HttpClient]
-    //   }
-    // }).providers
   ]
 };

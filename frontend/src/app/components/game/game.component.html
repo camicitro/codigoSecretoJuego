@@ -1,7 +1,17 @@
 <div class="cards-container">
     <div class="header-container">
-        <button (click)="nextGame()" class="nextgame game-btn" *ngIf="words">Nuevo juego</button>
-        <button (click)="copyLink()" class="share-link-btn game-btn">Compartir enlace</button>
+        <div class="turns-container">
+            <p class="currentPlayer" [ngClass]="{ 'red-turn': currentPlayer == 'red', 'blue-turn': currentPlayer == 'blue'}">{{ currentPlayer | colorToTeam }}</p>
+            <button class="change-turn-btn" (click)="makeTurnsChange()">Finalizar turno</button>
+        </div>
+        <div class="title-container">
+            <h1 class="game-title">Código Secreto Juego</h1>
+        </div>
+        <div class="header-btns">
+            <button (click)="copyLink()" class="share-link-btn game-btn">Compartir enlace</button>
+            <button (click)="nextGame()" class="nextgame game-btn" *ngIf="words">Nuevo juego</button>
+        </div>
+        
     </div>
     
     <div class="start-game-container" *ngIf="!words">
@@ -18,3 +28,4 @@
     <app-card [words]="words" [role]="role" (wordClicked)="onWordClicked($event)"></app-card>
     
 </div>
+<app-game-over class="game-over-popup" [winner]="winner" *ngIf="showGameOver" (close)="toggleGameOverPopUp()" (newGame)="nextGame()"></app-game-over>

@@ -1,0 +1,47 @@
+.pop-up-container {
+    background-color: #d7dbdf;
+    padding: 20px;
+    border-radius: 32px;
+    position: relative; 
+    color: #34495e;
+}
+
+.text-container {
+    margin: 16px;
+    padding: 0px 16px;
+}
+.text-title {
+    color: #212e3b;
+}
+
+.close-btn {
+    position: absolute; 
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #34495e;
+    margin: 16px;
+}
+
+.new-game-btn{
+    background-color: #34495e;
+    color: #d7dbdf;
+    padding: 12px 24px;
+    font-size: 18px;
+    border: 2px solid #d7dbdf ;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.new-game-container{
+    display: flex;
+    justify-content: center;
+}
