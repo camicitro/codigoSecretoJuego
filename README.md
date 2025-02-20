@@ -43,7 +43,9 @@ Contiene cuatro componentes:
 5. **LobbyComponent**: tiene el botón para comenzar juego y el que permite ver cómo jugar.
 
 ## ¿Cómo utilizar el programa?
-Aun no está desplegado por lo que para poder jugar, es necesario descargar el repositorio y ejecutarlo de manera local. Desde una terminal corremos el back y luego desde otra (sin cerrar la anterior) corremos el front. Finalmente accedemos a la ruta indicada en la consola desde donde corrimos el front.
+### Correrlo localmente
+Para poder jugar, es necesario descargar el repositorio y ejecutarlo. Para ello primero abrimos una terminal y nos vamos a la carpeta "backend" e instalamos las dependencias con el comando ```npm install``` y luego correrlo con ```npm run dev```.
+Luego en otra terminal hay que ir a la carpeta de frontend (sin cerrar la anterior), y también ejecutar ```npm install``` para que se instalen todas las dependencias necesarias. Finalmente, corremos el comando ```ng serve``` para iniciar el frontend y entramos al enlace que nos da.
 
 ## Mejoras a futuro
 - [ ] Desplegar el proyecto para poder jugarlo sin tener que correrlo localmente
