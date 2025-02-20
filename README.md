@@ -36,7 +36,8 @@ Dentro de esta carpeta los archivos de mayor importancia son:
 Contiene cuatro componentes:
 1. **CardComponent**: son las tarjetas individuales en sí, es decir, configura cómo se mostrará cada tipo de tarjeta.
    Hice en Figma los fondos de cada tarjeta para que fueran más personalizados:
-   ![tarjetas](https://github.com/user-attachments/assets/c04ee801-974d-4548-b7ac-9671084822f9)
+   ![tarjetas](https://github.com/user-attachments/assets/4c24aaa6-b61b-44d8-9933-d4db434abde1)
+
 
 3. **GameComponent**: este componente es el que permite jugar. Contiene las tarjetas y algunos botones extra.
 4. **HowToPlayComponent**: sólo utilizado para mostrar las reglas y enseñar a jugar a este juego. Funciona como pop up que se abre desde un botón del lobby.
