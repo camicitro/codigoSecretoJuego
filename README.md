@@ -36,14 +36,17 @@ Dentro de esta carpeta los archivos de mayor importancia son:
 Contiene cuatro componentes:
 1. **CardComponent**: son las tarjetas individuales en sí, es decir, configura cómo se mostrará cada tipo de tarjeta.
    Hice en Figma los fondos de cada tarjeta para que fueran más personalizados:
-   ![tarjetas](https://github.com/user-attachments/assets/c04ee801-974d-4548-b7ac-9671084822f9)
+   ![tarjetas](https://github.com/user-attachments/assets/4c24aaa6-b61b-44d8-9933-d4db434abde1)
+
 
 3. **GameComponent**: este componente es el que permite jugar. Contiene las tarjetas y algunos botones extra.
 4. **HowToPlayComponent**: sólo utilizado para mostrar las reglas y enseñar a jugar a este juego. Funciona como pop up que se abre desde un botón del lobby.
 5. **LobbyComponent**: tiene el botón para comenzar juego y el que permite ver cómo jugar.
 
 ## ¿Cómo utilizar el programa?
-Aun no está desplegado por lo que para poder jugar, es necesario descargar el repositorio y ejecutarlo de manera local. Desde una terminal corremos el back y luego desde otra (sin cerrar la anterior) corremos el front. Finalmente accedemos a la ruta indicada en la consola desde donde corrimos el front.
+### Correrlo localmente
+Para poder jugar, es necesario descargar el repositorio y ejecutarlo. Para ello primero abrimos una terminal y nos vamos a la carpeta "backend" e instalamos las dependencias con el comando ```npm install``` y luego correrlo con ```npm run dev```.
+Luego en otra terminal hay que ir a la carpeta de frontend (sin cerrar la anterior), y también ejecutar ```npm install``` para que se instalen todas las dependencias necesarias. Finalmente, corremos el comando ```ng serve``` para iniciar el frontend y entramos al enlace que nos da.
 
 ## Mejoras a futuro
 - [ ] Desplegar el proyecto para poder jugarlo sin tener que correrlo localmente
@@ -51,3 +54,4 @@ Aun no está desplegado por lo que para poder jugar, es necesario descargar el r
 - [X] Que al finalizar muestre un pop up indicando qué equipo gano. Para eso tengo que tener un registro del turno de cada equipo en caso de que uno presione la bomba (agregar botón de pasar).
 - [X] Añadir botón para agregar amigos así no hay que copiar el enlace desde la barra de navegación
 - [X] Al cliquear sobre una palabra, que no se revele el color directamente, sino que se preseleccione y aparezca un botón de confirmación, luego de confirmado recién ahí se revele el color de la tarjeta
+- [ ] Agregar un chat o un campo de texto para que el espía maestro inserte las pistas así se puede jugar remotamente
